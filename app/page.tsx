@@ -22,11 +22,11 @@ export default function Home() {
     <main className="grid-bg">
       <section className="mx-auto max-w-6xl px-5 pb-14 pt-16">
         <Badge>Loops House · Agents on Open Rails — Track 2 + Track 3</Badge>
-        <h1 className="mt-5 max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-tight">Rateqo. <span className="text-mint">The firm quote, minus the desk.</span></h1>
-        <p className="mt-5 max-w-2xl text-lg text-muted">A treasury agent for Nigerian freelancers and businesses who earn in USD₮/USDC and spend in naira. You set the rule once — keep a reserve, convert when the rate is right or by payday. Rateqo watches Textile FX, decides, and settles in cNGN on Celo. No OTC-desk chats.</p>
+        <h1 className="mt-5 max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-tight">Zelvo. <span className="text-mint">The firm quote, minus the desk.</span></h1>
+        <p className="mt-5 max-w-2xl text-lg text-muted">A treasury agent for Nigerian freelancers and businesses who earn in USD₮/USDC and spend in naira. You set the rule once — keep a reserve, convert when the rate is right or by payday. Zelvo watches Textile FX, decides, and settles in cNGN on Celo. No OTC-desk chats.</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="/app" className="moving-border rounded-xl px-5 py-3 text-sm font-bold text-white">Open the dashboard →</a>
-          <a href="https://github.com/ahmardchain/rateqo" className="rounded-xl border border-edge px-5 py-3 text-sm font-semibold text-muted hover:text-white">Read the code</a>
+          <a href="https://github.com/ahmardchain/zelvo" className="rounded-xl border border-edge px-5 py-3 text-sm font-semibold text-muted hover:text-white">Read the code</a>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           <Card><p className="text-xs uppercase tracking-widest text-muted">Textile preview · 100 USD₮ → cNGN</p>
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="mt-6"><LoopBeam /></div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <Card><h3 className="font-bold">Track 2 — Textile FX <span className="text-gold">$750 / $250</span></h3><p className="mt-2 text-sm text-muted">Judged on strategy P&amp;L, volume quoted and filled, originality. Every settlement is logged against the benchmark it beat — that log <em>is</em> the P&amp;L evidence.</p></Card>
-          <Card><h3 className="font-bold">Track 3 — Build with buy <span className="text-gold">$200 × 5</span></h3><p className="mt-2 text-sm text-muted">Judged on the problem and depth of integration: verified paid calls into services Rateqo doesn’t own. The decision log doubles as the proof-of-payment pack.</p></Card>
+          <Card><h3 className="font-bold">Track 3 — Build with buy <span className="text-gold">$200 × 5</span></h3><p className="mt-2 text-sm text-muted">Judged on the problem and depth of integration: verified paid calls into services Zelvo doesn’t own. The decision log doubles as the proof-of-payment pack.</p></Card>
         </div>
       </section>
     </main>

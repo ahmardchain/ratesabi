@@ -4,7 +4,7 @@
 export function agentCard(appUrl: string, walletAddress?: string) {
   return {
     type: "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
-    name: "Rateqo",
+    name: "Zelvo",
     description: "Treasury agent for Nigerian earners in USDT/USDC spending cNGN. It buys data, a benchmark rate, inference and address screening per-request via buy (x402 on Celo), decides with a deterministic rule, and settles FX on Textile (Celo, chain 42220).",
     image: `${appUrl}/og.png`,
     services: [

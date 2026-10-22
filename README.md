@@ -1,8 +1,8 @@
-# Rateqo — "The firm quote, minus the desk."
+# Zelvo — "The firm quote, minus the desk."
 
 A treasury agent for Nigerian freelancers and small businesses who **earn in USD₮/USDC and spend in naira**.
 
-You set a rule once — *keep 30% in USD₮, convert the rest to cNGN when Textile's quote beats the rate you'd get manually, or by payday* — and Rateqo watches, decides, and settles. No sitting in OTC-desk chats haggling over the rate.
+You set a rule once — *keep 30% in USD₮, convert the rest to cNGN when Textile's quote beats the rate you'd get manually, or by payday* — and Zelvo watches, decides, and settles. No sitting in OTC-desk chats haggling over the rate.
 
 Built for **Loops House — Agents on Open Rails** (deadline Nov 9, 2026), entered in **two tracks with one agent**:
 - **Track 2 · Open Corridors — Textile FX** ($750 / $250): judged on strategy P&L, volume quoted and filled, originality.
