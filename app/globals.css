@@ -1,0 +1,9 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { background:#070b12; color:#e7eef9; }
+.grid-bg { background-image: linear-gradient(rgba(53,224,176,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(53,224,176,.05) 1px, transparent 1px); background-size: 42px 42px; }
+.beam { animation: dash 3.2s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -240; } }
+.ticker { animation: tick .5s ease; }
+@keyframes tick { from { transform: translateY(6px); opacity:.2; } to { transform:none; opacity:1; } }
+.moving-border { position:relative; background:linear-gradient(#0c1320,#0c1320) padding-box, linear-gradient(110deg,#35e0b0,#f5c04e,#35e0b0) border-box; border:1.5px solid transparent; background-size:100% 100%, 220% 100%; animation: bordermove 3s linear infinite; }
+@keyframes bordermove { to { background-position: 0 0, 220% 0; } }
