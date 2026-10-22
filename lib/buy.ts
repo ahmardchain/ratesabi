@@ -40,7 +40,7 @@ export async function paidCall<T = unknown>(endpoint: string, payload: unknown, 
   return { data: (await paid.json()) as T, paidUsd: null, endpoint, at: new Date().toISOString() };
 }
 
-/* Typed wrappers for the four services RateSabi actually uses in its loop. Prices = buy catalogue snapshot 2026-10-13. */
+/* Typed wrappers for the four services Rateqo actually uses in its loop. Prices = buy catalogue snapshot 2026-10-13. */
 export const BUY_SERVICES = [
   { id: "chainstack", name: "Chainstack · Celo RPC", price: "$0.01 / request (batch ≤ 2,000 calls)", role: "Reads wallet balances + Textile contract state on Celo mainnet", endpoint: "/chainstack/celo" },
   { id: "browser", name: "Browser session", price: "$0.0037–$0.0091 / session", role: "Fetches the off-chain reference NGN/USD rate — the benchmark the strategy must beat", endpoint: "/v1/browser/sessions" },

@@ -1,4 +1,4 @@
-# RateSabi — Official Requirements & Judging (both tracks)
+# Rateqo — Official Requirements & Judging (both tracks)
 Sources checked 2026-10-22: Loops hackathon page (loops.house/agents-on-open-rails), Textile FX docs (fx-docs.textilecredit.com), buy catalogue (usebuy.ai). Deadline: **Mon 2026-11-09 09:00 GMT** (registration AND submission). Winners Fri Nov 13. Prize pool $5,000 total; dual entry allowed — "enter as many tracks as you want; a team can win only one prize per track."
 
 ## Shared gates (all tracks)
@@ -26,7 +26,7 @@ Build agents that quote and settle FX on Textile: cNGN, wARS, wBRL, USDC against
 - Response envelope `{ data: { rfqId, claimToken, status, quote{ sellAmount, buyAmount, feeAmount, takerPays, rateRay, expiresAt, reactor, orders[] }, transactions{ approval, swap } } }`. **Always broadcast `transactions.swap`** (top-level order is only the first slice of a bundle).
 - Execute: approve `quote.takerPays` of sell token to `quote.reactor` → send `transactions.swap` from the taker → `POST /v2/rfq/{id}/submit {txHash}` → `GET /v2/rfq/{id}` status. Cancel/submit/status need the API key or the `X-Rfq-Claim` header (claim token comes back exactly once — store it).
 - Conventions: amounts are **strings in atomic units**; rates are **RAY-scaled (1e27) strings** (`rateRay`); exactly one of `sellAmount`/`buyAmount`; mainnet size floor ≈ $1 notional.
-- Attribution: send `includeAttribution: true` + `builderCodes` (≤3, `[a-z0-9_]`, 1–32 chars) on `/rfq/request` and Textile ends `transactions.swap.data` with the ERC-8021 tag (`data.attributionSuffix` returns it separately). **Do not append a second suffix yourself — indexers read only the last tag.** RateSabi's `lib/units.withAttributionTag` is only a fallback for payloads built without Textile attribution.
+- Attribution: send `includeAttribution: true` + `builderCodes` (≤3, `[a-z0-9_]`, 1–32 chars) on `/rfq/request` and Textile ends `transactions.swap.data` with the ERC-8021 tag (`data.attributionSuffix` returns it separately). **Do not append a second suffix yourself — indexers read only the last tag.** Rateqo's `lib/units.withAttributionTag` is only a fallback for payloads built without Textile attribution.
 
 ## Track 3 — Build with buy — $1,000 across 5 projects ($200 each)
 Solve a real problem with a product that pays for services it doesn't own: compute, browsers, data, inference.
@@ -35,4 +35,4 @@ Submission must state the services used and provide **proof of payment**. No att
 
 ### buy (usebuy.ai) facts
 - 782 tools, one wallet, Celo mainnet (v0.8.3 beta). Pay per request in USDC / USD₮ / USA₮ (EIP-3009) via x402; `buy curl --max-amount <cap>` via `https://gateway.usebuy.ai`. No accounts, API keys, or subscriptions; some services need a Self proof of personhood (larger Google Cloud VMs).
-- Services RateSabi uses (catalogue prices, snapshot 2026-10-13): Chainstack Celo RPC **$0.01**/request (batch ≤2,000 calls); Browser sessions **$0.0037–$0.0091**; Cencori LLM inference **$0.01**/completion; Sanctions & address screening **$0.002–$0.005**. SQD data is free — useful, but not a paid call.
+- Services Rateqo uses (catalogue prices, snapshot 2026-10-13): Chainstack Celo RPC **$0.01**/request (batch ≤2,000 calls); Browser sessions **$0.0037–$0.0091**; Cencori LLM inference **$0.01**/completion; Sanctions & address screening **$0.002–$0.005**. SQD data is free — useful, but not a paid call.
